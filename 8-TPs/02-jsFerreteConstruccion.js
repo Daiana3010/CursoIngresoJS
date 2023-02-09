@@ -3,47 +3,74 @@ A.	 mostrar la cantidad de alambre a comprar  si se ingresara el largo y el anch
 B.	mostrar la cantidad de alambre a comprar  si se ingresara el radio  de un terreno circular y se debe alambra con tres hilos de alambre.
 C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de cal, debemos mostrar cuantas bolsas se necesitan de cada uno para las medidas que nos ingresen.
 */
-let largodelTerreno;
-let AnchodelTerreno;
-let RadiodelTerreno;
-let totaldeAlambre;
-let cantidaddeHilos;
-let metros;
-let cemento2bolsas;
-let cantidadCementonecesaria;
-let cal3Bolsas;
+
+
 function Rectangulo () 
 { 
-largodelTerreno = parseFloat(document.getElementById("txtIdLargo").value);
-AnchodelTerreno = parseFloat(document.getElementById("txtIdAncho").value);
+    let anchoDelTerreno;
+    let largoDelTerreno;
+    let cantidadDeAlambre;
+    let perimetro;
 
-cantidaddeHilos = 3;
-totaldeAlambre = ((largodelTerreno + AnchodelTerreno) * 2) * cantidaddeHilos;
+    anchoDelTerreno = txtIdAncho.value;
+    largoDelTerreno = txtIdLargo.value;
 
-alert ("el total de alambre es " + totaldeAlambre + " para el rectangulo ");
+    anchoDelTerreno = parseFloat(anchoDelTerreno);
+    largoDelTerreno = parseFloat(largoDelTerreno);
+
+    perimetro = (largoDelTerreno + anchoDelTerreno) * 2;
+
+    cantidadDeAlambre = perimetro * 3;
+
+    alert("Se necesitan: " + cantidadDeAlambre + " metros");
+
 }
 
 function Circulo () 
 {
-	RadiodelTerreno = parseFloat(document.getElementById("txtIdRadio").value);
+    let radioDelCirculo;
+    let cantidadDeAlambre;
+    let perimetroDelCirculo;
+
+    radioDelCirculo = txtIdRadio.value;
+
+    radioDelCirculo = parseFloat(radioDelCirculo);
+
+    // perimetro = 2 * pi * r
+    perimetroDelCirculo = 2 * Math.PI * radioDelCirculo;
+    cantidadDeAlambre = perimetroDelCirculo * 3;
+
+    alert("La cantidad de alambre que se debe comprar es de: " + cantidadDeAlambre.toFixed(2) + " metros");
+
+	/*RadiodelTerreno = parseFloat(document.getElementById("txtIdRadio").value);
 
     cantidaddeHilos = 3;
     // para calcular la circunferencia de un terreno circular es
     // 2 por pi por el radio, y lo multiplico por la cantidad de hilos (3).
     totaldeAlambre = 2 * 3.1416 * RadiodelTerreno * cantidaddeHilos; 
-    alert ("el total de alambre es " + totaldeAlambre + " para el circulo ");
+    alert ("el total de alambre es " + totaldeAlambre + " para el circulo ");*/
 }
 function Materiales () 
 {
-	metros = largodelTerreno * AnchodelTerreno;
+    let anchoDelTerreno;
+    let largoDelTerreno;
 
-    cemento2bolsas = 2;
-    cantidadCementonecesaria = metros * cemento2bolsas;
+    anchoDelTerreno = txtIdAncho.value;
+    largoDelTerreno = txtIdLargo.value;
 
-    cal3Bolsas = 3;
-    cantidadCementonecesaria = metros * cal3Bolsas;
+    anchoDelTerreno = parseFloat(anchoDelTerreno);
+    largoDelTerreno = parseFloat(largoDelTerreno);
 
-    alert ("se necesitan " + cemento2bolsas + "y " + cal3Bolsas + "para el contrapiso ");
+    let metros;
+	metros = largoDelTerreno * anchoDelTerreno;
+
+    let cantidadCemento;
+    cantidadCemento = metros * 2
+
+    let cantidadCal;
+    cantidadCal = metros * 3;
+
+    alert ("se necesitan " + cantidadCemento + " bolsas de cemento y " + cantidadCal + " bolsa de cal para el contrapiso ");
 }
 
     

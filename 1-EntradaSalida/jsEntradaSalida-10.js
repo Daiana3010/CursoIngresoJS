@@ -10,18 +10,22 @@ function mostrarAumento()
 	let resultado;
 	let importedescuento;
 
-	importe = parseFloat(document.getElementById("txtIdImporte").value); 
-	resultado = parseFloat(document.getElementById("txtIdResultado").value); 
+	importe = txtIdImporte.value;
+	importe = parseInt (importe);
 
-//para calcular el descuento, se divide el porcentaje por 100 y eso se multiplica por el precio original.
+	resultado = txtIdResultado.value;
+	resultado = parseInt (resultado);
+
+	//importe = parseInt(document.getElementById("txtIdImporte").value); 
+	//resultado = parseInt (document.getElementById("txtIdResultado").value); 
+
+    //para calcular el descuento, se divide el porcentaje por 100 y eso se multiplica por el precio original.
 	
-//importedescuento = 25 / 100 * importe;
+    //importedescuento = 25 / 100 * importe;
 
-importedescuento = .25 * importe;
+    importedescuento = 0.25 * importe;
 
-document.getElementById("txtIdResultado").value = importedescuento;
-
-
+    document.getElementById("txtIdResultado").value = importedescuento;
 
 }
 

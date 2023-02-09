@@ -7,17 +7,12 @@ function SacarResto()
 {
 	let numerodividiendo;
 	let numerodivisor;
-	let cociente;
 	let resto;
 
 	numerodividiendo = parseInt (document.getElementById("txtIdNumeroDividendo").value);
 	numerodivisor = parseInt (document.getElementById("txtIdNumeroDivisor").value);
 
-	cociente = parseInt (numerodividiendo / numerodivisor); // el numero dividendo menos (el numero cociente * el numero divisor)
-
-	resto = numerodividiendo - (cociente * numerodivisor);
-
-
+	resto = numerodividiendo % numerodivisor ;
 
 	alert ("el resto es " + resto);
 

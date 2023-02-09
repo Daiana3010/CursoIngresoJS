@@ -4,17 +4,6 @@ B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 
-  let precio1;
-  let precio2;
-  let precio3;
-  let sumatoria;
-  let promedio;
-  let porcentajeIva;
-  
-  
-
-
-function obtenerDatos()
 {
     precio1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
     precio2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
@@ -23,32 +12,60 @@ function obtenerDatos()
 }
 function Sumar () 
 { 
+  let precio1;
+  let precio2;
+  let precio3;
+  let sumatoria;
 
-  obtenerDatos();
+  precio1 = txtIdPrecioUno.value;
+  precio2 = txtIdPrecioDos.value;
+  precio3 = txtIdPrecioTres.value;
+
+  precio1 = parseInt (precio1);
+  precio2 = parseInt (precio2);
+  precio3 = parseInt (precio3);
   
   sumatoria = precio1 + precio2 + precio3;
   alert ("el resultado de la suma es " + sumatoria); 
-
-
 	
 }
 function Promedio () 
-
 { 
-    
-    obtenerDatos();
+  let precio1;
+  let precio2;
+  let precio3;
+  let promedio;
 
-    promedio = (precio1 + precio2 + precio3) / 3;
+  precio1 = txtIdPrecioUno.value;
+  precio2 = txtIdPrecioDos.value;
+  precio3 = txtIdPrecioTres.value;
+  
+  precio1 = parseInt (precio1);
+  precio2 = parseInt (precio2);
+  precio3 = parseInt (precio3);
+  
+  promedio = (precio1 + precio2 + precio3) / 3;
 
-    alert ("el resultado del promedio es " + promedio);
+  alert ("el resultado del promedio es " + promedio);
 
 }
 function PrecioFinal () 
 {
-    obtenerDatos();
-    
-    porcentajeIva = (precio1 + precio2 + precio3) * 1.21;
+  let precio1;
+  let precio2;
+  let precio3;
+  let porcentajeIva;
 
-alert ("el precio final es " + porcentajeIva);
+  precio1 = txtIdPrecioUno.value;
+  precio2 = txtIdPrecioDos.value;
+  precio3 = txtIdPrecioTres.value;
+  
+  precio1 = parseInt (precio1);
+  precio2 = parseInt (precio2);
+  precio3 = parseInt (precio3);
+    
+  porcentajeIva = (precio1 + precio2 + precio3) * 1.21;
+
+  alert ("el precio final es " + porcentajeIva);
 	
 }

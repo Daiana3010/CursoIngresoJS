@@ -9,15 +9,15 @@ let sueldo;
 let resultado;
 let nuevosueldo;
 
-sueldo = parseFloat (document.getElementById("txtIdSueldo").value);
-resultado = parseFloat (document.getElementById("txtIdResultado").value);
+sueldo = parseInt (document.getElementById("txtIdSueldo").value);
+resultado = parseInt (document.getElementById("txtIdResultado").value);
 
 // para calcular el nuevo sueldo deberia sumarle al sueldo original el aumento
 // el calculo de porcentaje de un valor lo consigo multiplicando el valor por el porcentaje y lo divido por 100
 
 //aumento = sueldo * 10 / 100; 
 
-nuevosueldo = sueldo * .1;
+nuevosueldo = sueldo * 1.1;
 
-document.getElementById("txtIdResultado").value = nuevosueldo;
+document.getElementById("txtIdResultado").value = nuevosueldo.toFixed(2);
 }
