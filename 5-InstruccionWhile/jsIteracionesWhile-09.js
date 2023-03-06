@@ -8,14 +8,36 @@ function mostrar()
 	var numeroMaximo;
 	var numeroMinimo;
 	var respuesta;
+
 	//iniciar variables
 	banderaDelPrimero="es el primero";
-	respuesta='si';
+	respuesta="si";	
+
 	while(respuesta=="si")
 	{
-		
-		respuesta=prompt("desea continuar?");
+		numeroIngresado = prompt("Ingrese un numero");
+		numeroIngresado = parseInt(numeroIngresado);
+
+		if (banderaDelPrimero == "es el primero") 
+		{
+			banderaDelPrimero = "";
+			numeroMaximo = numeroIngresado;
+			numeroMinimo = numeroIngresado;	
+		}
+		else
+		{
+			if (numeroIngresado > numeroMaximo) 
+			{
+				numeroMaximo = numeroIngresado;
+			}
+			if (numeroIngresado < numeroMinimo)
+			{
+				numeroMinimo = numeroIngresado;				
+			}
+		}
+				
+		respuesta=prompt("desea continuar? si/no ");
 	}
 	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+	txtIdMinimo.value=numeroMinimo;
 }//FIN DE LA FUNCIÓN

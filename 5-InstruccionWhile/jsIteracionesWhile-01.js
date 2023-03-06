@@ -55,15 +55,17 @@ function mostrar()
 		
 		do{
 			nacionalidadIngresada = prompt("Ingrese la nacionalidad de " + nombreJugadorIngresado + " (argentino, ingles, otro...) ");
-			expression = !(nacionalidadIngresada != null && isNaN(nacionalidadIngresada));
+			expression = nacionalidadIngresada == null && !isNaN(nacionalidadIngresada));
 		}while(expression);
 		
 		do{
 			posicionIngresada = prompt("Ingrese la posicion de " + nombreJugadorIngresado + " (arquero, defensor, mediocampista o delantero)" );
-			expression = !(
-							posicionIngresada != null &&
-						   (posicionIngresada == "arquero" ||  posicionIngresada == "defensor" || posicionIngresada == "mediocampista" ||  posicionIngresada == "delantero")
-						  );
+			expression = posicionIngresada != null &&
+						 posicionIngresada != "arquero" &&
+						 posicionIngresada != "defensor" &&
+						 posicionIngresada != "mediocampista" &&
+						 posicionIngresada != "delantero"
+						  ;
 		}while(expression);
 
 		do{

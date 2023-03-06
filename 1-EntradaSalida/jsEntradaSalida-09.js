@@ -6,18 +6,18 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
 let sueldo;
-let resultado;
 let nuevosueldo;
-
-sueldo = parseInt (document.getElementById("txtIdSueldo").value);
-resultado = parseInt (document.getElementById("txtIdResultado").value);
-
+let aumento;
 // para calcular el nuevo sueldo deberia sumarle al sueldo original el aumento
 // el calculo de porcentaje de un valor lo consigo multiplicando el valor por el porcentaje y lo divido por 100
 
-//aumento = sueldo * 10 / 100; 
 
-nuevosueldo = sueldo * 1.1;
+sueldo = parseFloat (document.getElementById("txtIdSueldo").value);
 
-document.getElementById("txtIdResultado").value = nuevosueldo.toFixed(2);
+aumento = sueldo * .1; // .1 es o,1
+
+nuevosueldo = sueldo + aumento;
+
+
+
 }
