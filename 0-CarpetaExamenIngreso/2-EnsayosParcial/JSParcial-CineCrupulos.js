@@ -165,8 +165,8 @@ function mostrar()
 	 resultadoMensaje += "   Porcentaje Femenino  - " + resultadoPorcentajeClientePorGeneroFemenino +  "</br>";
 	 resultadoMensaje += "   Porcentaje Masculino - " + resultadoPorcentajeClientePorGeneroMasculino + "</br>";
 	 resultadoMensaje += "   Porcentaje NoBinario - " + resultadoPorcentajeClientePorGeneroNoBinario + "</br>";
-	 resultadoMensaje += "C) Nombre y genero del cliente de menor edad que haya visto una pelicula de Heroes." + resultadoClienteMenorConPeliculaHeroes + "</br>";
-	 resultadoMensaje += "D) El tipo de pelicula mas concurrida" + resultadoTipoPeliculaMasConcurrida + "</br>";
+	 resultadoMensaje += "C) Nombre y genero del cliente de menor edad que haya visto una pelicula de Heroes: " + resultadoClienteMenorConPeliculaHeroes + "</br>";
+	 resultadoMensaje += "D) El tipo de pelicula mas concurrida: " + resultadoTipoPeliculaMasConcurrida + "</br>";
 
 	document.write(resultadoMensaje);
 	
